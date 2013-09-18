@@ -3,6 +3,7 @@ addpath(home);
 addpath(strcat(home,'/classes/'));
 addpath(strcat(home,'/utilities/'));
 addpath(strcat(home,'/localization/'));
+addpath(strcat(home,'/utilities/ldof/'));
 
 run (strcat(home,'/utilities/cvx/cvx_setup.m'));
 addpath_recurse('../ML toolbox/');
