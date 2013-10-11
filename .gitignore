@@ -1,0 +1,10 @@
+# ignore matlab temporary files
+*~
+*.mat
+
+#ignore images,movies etc.
+*.avi
+*.png
+*.pdf
+*.jpg
+
