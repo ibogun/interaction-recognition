@@ -11,7 +11,7 @@ bodyReference=bodyReference/2;
 n=length(trajectory);
 
 trajectoriesArray=cell(2,n);
-%trajectory=localizeInteraction(trajectory);
+trajectory=localizeInteraction(trajectory);
 for v=1:n
     
     meanPos=bodyReference(v,:);
@@ -30,9 +30,9 @@ for v=1:n
     %[y x] is correct
     x=abs(x-meanPos(1));
     y=y-meanPos(2);
-    
-%     y=conv(y,gaussFilter,'same');
-%     x=conv(x,gaussFilter,'same'); 
+   
+    y=conv(y,gaussFilter,'same');
+    x=conv(x,gaussFilter,'same'); 
     
     
     traj=[x;y];

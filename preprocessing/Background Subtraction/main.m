@@ -6,18 +6,19 @@ close all;
 id=4;
 
 % add TFOCS to your path, so change this to suit your computer
-addpath /host/Users/ibogun2010/Dropbox/Code/Libraries/TFOCS
+addpath /home/ibogun2010/Code/TFOCS;
 
 %X=generateVideoVolumeFunction(framesFolder);
 %[L,S]=RPCA(X);
 
-sparseFiles='/host/Users/ibogun2010/datasets/Gupta/sparse/';
+sparseFiles='/media/ibogun2010/OS/Users/ibogun2010/Documents/datasets/Gupta/sparse/';
 sparseNames=dir(sparseFiles);
 sparseNames=sparseNames(3:end);
 
 
 %load c20;
 
+load trajectoriesCalculated;
 
 n=480;
 m=640;
@@ -37,7 +38,10 @@ for id=1:length(sparseNames)
     load(currentSparseName);
     M=preprocessSparseMatrix(S,n,m);
     %[n,m,~]=size(M);
-    [bestI,bestJ,bestT]=findBestHandPosition(M,w,h);
+    %[bestI,bestJ,bestT]=findBestHandPosition(M,w,h);
+    bestI=trajectory(id).bestI;
+    bestJ=trajectory(id).bestJ;
+    bestT=trajectory(id).bestT;
     % BEFORE PLOTTING SWAP AXES!!!!
     
     % for vid 6

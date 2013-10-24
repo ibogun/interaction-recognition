@@ -1,12 +1,12 @@
 
 C=[ 1 10 100 1000];
 sigma=[0.1 1 10 100 1000];
-
+load groundTruth;
 X=trajectoriesArray;
 Y=trajectoriesArray;
 Z=trajectoriesArray;
-fid = fopen('All possible kernels try#7.txt','w');
-fprintf(fid,'Linear combination of the trajectories, velocities smoothed and localized with limits on the energy\n with gaussian alignment kernel for sigma=0.1,1,10,100,1000\n kernels are normalized K(i,j)=K(i,j)/sqrt(K(i,i)*K(j,j))\n');
+fid = fopen('All possible kernels calculated.txt','a+');
+fprintf(fid,'Linear combination of the trajectories, velocities smoothed and localized with limits on the energy.\n...Trajectories were calculated from energy only.\n with gaussian alignment kernel for sigma=0.1,1,10,100,1000\n kernels are normalized K(i,j)=K(i,j)/sqrt(K(i,i)*K(j,j))\n');
 maxAccuracy=0;
 accuracy=0;
 counter=0;
@@ -27,7 +27,7 @@ K=calculateKernel(X,kernel);
 
 for i=1:length(C)
     
-    %K(:,:,3)=Kobj;
+    %K(:,:,3)=Kobj;e
     
     [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'QuiLane2009');
     

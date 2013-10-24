@@ -1,7 +1,7 @@
 clc;clear; close all;
 
 
-load interpolatedFullDataInStruct;
+load ../interpolatedFullDataInStruct;
 load trajectoriesCalculated;
 
 total=0;

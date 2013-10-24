@@ -1,6 +1,0 @@
-Linear combination of the velocities localized from t(maxEnergy): end
- with gaussian alignment kernel for sigma=0.1,1,10,100,1000
- kernels are normalized K(i,j)=K(i,j)/sqrt(K(i,i)*K(j,j))
-method=QuiLane2009 C=1.000000, accuracy=0.370370 
-method=QuiLane2009 C=10.000000, accuracy=0.296296 
-method=QuiLane2009 C=100.000000, accuracy=0.296296 
