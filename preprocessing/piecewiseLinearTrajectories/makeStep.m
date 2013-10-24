@@ -32,7 +32,7 @@ detIdx=zeros(nAhead,1);
 for nextFrame=frame+1:frame+nAhead
     [next, nextIdx]=findClosestDetection(startDetection,d{nextFrame},r*(nextFrame-frame));
     
-    if (~isempty(next)&& dGroup(nextFrame,nextIdx)==0)
+    if (~isempty(next))
         line(nextFrame-frame+1,:)=findCenter(next);
         detIdx(nextFrame-frame,1)=nextIdx;
     end
@@ -69,11 +69,12 @@ if (size(goodIdx)==1)
 end
 
 % hardcoded to simplify the code
-dGroup(frame,detection)=currentD;
+dGroup{frame,detection}=[dGroup{frame,detection},currentD];
 
 % add same label to the detections
 for i=2:length(goodIdx)
-    dGroup(frame+goodIdx(i)-1, detIdx(goodIdx(i)-1))=currentD;
+    dGroup{frame+goodIdx(i)-1, detIdx(goodIdx(i)-1)}=...
+        [dGroup{frame+goodIdx(i)-1, detIdx(goodIdx(i)-1)},currentD];
 end
 
 [maxVal, idx]=max(goodIdx);

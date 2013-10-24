@@ -1,0 +1,5 @@
+getImageDataAnnotated;
+
+clusteringAndprocessing;
+
+crossValidation;

@@ -4,8 +4,9 @@ dFolder='/host/Users/ibogun2010/datasets/Gupta/detections/hand detections/c01/';
 files=dir(dFolder);
 files=files(3:end);
 
+
 % 10 detections in length(files) frame -> total 10*length(files)
-dGroup=zeros(length(files),10);
+dGroup=cell(length(files),10);
 
 % load all detections into a matrix d
 for i=1:length(files)

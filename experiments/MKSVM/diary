@@ -1,0 +1,445 @@
+test
+<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/experiments/MKSVM/test.m',25,1)">25  </a>for i=1:length(C)
+if system_dependent('IsDebugMode')==1, dbcont; end
+
+method =
+
+QuiLane2009
+
+0.084823 
+ 
+0.088118 
+ 
+0.158048 
+ 
+0.334636 
+ 
+0.334376 
+ 
+0.084673 
+ 
+0.089983 
+ 
+0.224968 
+ 
+0.299953 
+ 
+0.300422 
+ 
+0.089588 
+ 
+0.095206 
+ 
+0.242277 
+ 
+0.288455 
+ 
+0.284473 
+ 
+0.090973 
+ 
+0.096678 
+ 
+0.290734 
+ 
+0.264773 
+ 
+0.256842 
+ 
+0.101037 
+ 
+0.104963 
+ 
+0.152973 
+ 
+0.320251 
+ 
+0.320776 
+ 
+0.099834 
+ 
+0.106094 
+ 
+0.234106 
+ 
+0.278232 
+ 
+0.281734 
+ 
+0.084764 
+ 
+0.088088 
+ 
+0.158552 
+ 
+0.334453 
+ 
+0.334144 
+ 
+0.084711 
+ 
+0.089606 
+ 
+0.225057 
+ 
+0.300068 
+ 
+0.300557 
+ 
+0.089627 
+ 
+0.094806 
+ 
+0.242390 
+ 
+0.288579 
+ 
+0.284597 
+ 
+0.091014 
+ 
+0.096272 
+ 
+0.290835 
+ 
+0.264922 
+ 
+0.256957 
+ 
+0.100999 
+ 
+0.104960 
+ 
+0.153277 
+ 
+0.320108 
+ 
+0.320655 
+ 
+0.099859 
+ 
+0.105629 
+ 
+0.234424 
+ 
+0.278284 
+ 
+0.281804 
+ 
+0.091898 
+ 
+0.095951 
+ 
+0.159614 
+ 
+0.326469 
+ 
+0.326067 
+ 
+0.083891 
+ 
+0.089605 
+ 
+0.231542 
+ 
+0.297313 
+ 
+0.297648 
+ 
+0.088556 
+ 
+0.094587 
+ 
+0.249968 
+ 
+0.285689 
+ 
+0.281200 
+ 
+0.084731 
+ 
+0.090502 
+ 
+0.279706 
+ 
+0.275981 
+ 
+0.269080 
+ 
+0.101531 
+ 
+0.106009 
+ 
+0.148664 
+ 
+0.321456 
+ 
+0.322340 
+ 
+0.098825 
+ 
+0.105556 
+ 
+0.241169 
+ 
+0.275562 
+ 
+0.278888 
+ 
+0.091775 
+ 
+0.095823 
+ 
+0.160538 
+ 
+0.326232 
+ 
+0.325632 
+ 
+0.083789 
+ 
+0.089496 
+ 
+0.232255 
+ 
+0.297171 
+ 
+0.297289 
+ 
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('variable', '/home/ivan/Dropbox/Code/interaction/utilities/cvx/keywords/variable.m', 60)" style="font-weight:bold">variable</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/utilities/cvx/keywords/variable.m',60,0)">line 60</a>)
+
+In <a href="matlab:helpUtils.errorDocCallback('variables', '/home/ivan/Dropbox/Code/interaction/utilities/cvx/keywords/variables.m', 24)" style="font-weight:bold">variables</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/utilities/cvx/keywords/variables.m',24,0)">line 24</a>)
+    evalin( 'caller', [ 'variable ', varargin{k} ] );
+
+In <a href="matlab:helpUtils.errorDocCallback('svmDual', '/home/ivan/Dropbox/Code/ML toolbox/SupervisedLearning/SVM/svmDual.m', 26)" style="font-weight:bold">svmDual</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/ML toolbox/SupervisedLearning/SVM/svmDual.m',26,0)">line 26</a>)
+variables alpha(n)
+
+In <a href="matlab:helpUtils.errorDocCallback('trainSVMonlyKernel', '/home/ivan/Dropbox/Code/ML toolbox/SupervisedLearning/SVM/trainSVMonlyKernel.m', 17)" style="font-weight:bold">trainSVMonlyKernel</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/ML toolbox/SupervisedLearning/SVM/trainSVMonlyKernel.m',17,0)">line 17</a>)
+alpha=svmDual(K,y,C);
+
+In <a href="matlab:helpUtils.errorDocCallback('leaveOneOut', '/home/ivan/Dropbox/Code/interaction/experiments/MKSVM/leaveOneOut.m', 45)" style="font-weight:bold">leaveOneOut</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/experiments/MKSVM/leaveOneOut.m',45,0)">line 45</a>)
+        [predictors{k,1}]=trainSVMonlyKernel( smallKernel,y',C,method);
+
+In <a href="matlab:helpUtils.errorDocCallback('test', '/home/ivan/Dropbox/Code/interaction/experiments/MKSVM/test.m', 29)" style="font-weight:bold">test</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/experiments/MKSVM/test.m',29,0)">line 29</a>)
+    [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'QuiLane2009');
+} 
+test
+
+method =
+
+QuiLane2009
+
+0.084823 0.088118 0.158048 0.334636 0.334376 
+ 
+0.084673 0.089983 0.224968 0.299953 0.300422 
+ 
+0.089588 0.095206 0.242277 0.288455 0.284473 
+ 
+0.090973 0.096678 0.290734 0.264773 0.256842 
+ 
+0.101037 0.104963 0.152973 0.320251 0.320776 
+ 
+0.099834 0.106094 0.234106 0.278232 0.281734 
+ 
+0.084764 0.088088 0.158552 0.334453 0.334144 
+ 
+0.084711 0.089606 0.225057 0.300068 0.300557 
+ 
+0.089627 0.094806 0.242390 0.288579 0.284597 
+ 
+0.091014 0.096272 0.290835 0.264922 0.256957 
+ 
+0.100999 0.104960 0.153277 0.320108 0.320655 
+ 
+0.099859 0.105629 0.234424 0.278284 0.281804 
+ 
+0.091898 0.095951 0.159614 0.326469 0.326067 
+ 
+0.083891 0.089605 0.231542 0.297313 0.297648 
+ 
+0.088556 0.094587 0.249968 0.285689 0.281200 
+ 
+0.084731 0.090502 0.279706 0.275981 0.269080 
+ 
+0.101531 0.106009 0.148664 0.321456 0.322340 
+ 
+0.098825 0.105556 0.241169 0.275562 0.278888 
+ 
+0.091775 0.095823 0.160538 0.326232 0.325632 
+ 
+0.083789 0.089496 0.232255 0.297171 0.297289 
+ 
+0.088508 0.094536 0.250311 0.285597 0.281048 
+ 
+0.084756 0.090528 0.279986 0.275577 0.269153 
+ 
+0.101380 0.105851 0.149709 0.321200 0.321860 
+ 
+0.098726 0.105450 0.241849 0.275367 0.278609 
+ 
+0.092515 0.096595 0.153844 0.328789 0.328256 
+ 
+0.084647 0.090412 0.224839 0.299773 0.300328 
+ 
+0.089445 0.095537 0.242949 0.288050 0.284019 
+ 
+0.090875 0.097065 0.290848 0.264643 0.256569 
+ 
+0.101817 0.106307 0.146205 0.322424 0.323247 
+ 
+0.091427 0.097654 0.233512 0.287173 0.290235 
+ 
+0.091506 0.094608 0.163775 0.325432 0.324679 
+ 
+0.084782 0.089347 0.224761 0.300303 0.300807 
+ 
+0.089688 0.094516 0.242234 0.288774 0.284788 
+ 
+0.091079 0.095982 0.290681 0.265117 0.257141 
+ 
+0.093352 0.096517 0.148621 0.330298 0.331212 
+ 
+0.099825 0.105199 0.235094 0.278176 0.281707 
+ 
+0.091981 0.096037 0.158612 0.327009 0.326362 
+ 
+0.077822 0.083122 0.225694 0.306588 0.306773 
+ 
+0.089146 0.095218 0.245452 0.287114 0.283070 
+ 
+0.090783 0.096966 0.291664 0.264282 0.256306 
+ 
+0.101721 0.106207 0.146928 0.322201 0.322943 
+ 
+0.099363 0.106131 0.237269 0.276832 0.280405 
+ 
+0.091769 0.095816 0.160464 0.326339 0.325611 
+ 
+0.083793 0.089500 0.232201 0.297203 0.297302 
+ 
+0.083268 0.088939 0.235488 0.296849 0.295455 
+ 
+0.089931 0.096056 0.297053 0.263048 0.253913 
+ 
+0.101364 0.105834 0.149613 0.321376 0.321813 
+ 
+0.098687 0.105408 0.241680 0.275722 0.278503 
+ 
+0.092654 0.096740 0.152652 0.329205 0.328749 
+ 
+0.084462 0.090214 0.226481 0.299172 0.299671 
+ 
+0.089163 0.095236 0.245283 0.287194 0.283124 
+ 
+0.090853 0.097041 0.291042 0.264559 0.256505 
+ 
+0.102225 0.106733 0.142877 0.323625 0.324541 
+ 
+0.091816 0.098070 0.230192 0.288449 0.291473 
+ 
+0.092098 0.096160 0.157686 0.327279 0.326777 
+ 
+0.083992 0.089713 0.230664 0.297624 0.298006 
+ 
+0.082794 0.088433 0.237047 0.297921 0.293804 
+ 
+0.090324 0.096476 0.295091 0.263094 0.255014 
+ 
+0.101703 0.106188 0.147195 0.322028 0.322885 
+ 
+0.098890 0.105625 0.240884 0.275532 0.279069 
+ 
+0.092107 0.096169 0.157577 0.327337 0.326809 
+ 
+0.084114 0.089843 0.229702 0.297904 0.298437 
+ 
+0.088777 0.094823 0.248451 0.286050 0.281898 
+ 
+0.084363 0.090108 0.281831 0.275778 0.267920 
+ 
+0.101644 0.106126 0.147621 0.321912 0.322697 
+ 
+0.098852 0.105585 0.241167 0.275435 0.278962 
+ 
+0.091558 0.095060 0.162926 0.325593 0.324862 
+ 
+0.084819 0.089289 0.224528 0.300428 0.300937 
+ 
+0.089718 0.094447 0.242076 0.288873 0.284886 
+ 
+0.091117 0.095919 0.290491 0.265225 0.257249 
+ 
+0.093287 0.096855 0.148758 0.330121 0.330979 
+ 
+0.099783 0.105042 0.235530 0.278054 0.281590 
+ 
+0.092102 0.096164 0.157752 0.327193 0.326789 
+ 
+0.084011 0.089733 0.230499 0.297684 0.298073 
+ 
+0.088719 0.094761 0.248849 0.285956 0.281715 
+ 
+0.090269 0.096417 0.295413 0.263045 0.254857 
+ 
+0.101759 0.106247 0.146785 0.322147 0.323063 
+ 
+0.092431 0.098726 0.225598 0.289828 0.293418 
+ 
+0.092614 0.096699 0.153079 0.329000 0.328608 
+ 
+0.078420 0.083761 0.220029 0.308661 0.309129 
+ 
+0.088582 0.094615 0.250037 0.285486 0.281280 
+ 
+0.090433 0.096592 0.294149 0.263505 0.255321 
+ 
+0.102456 0.106974 0.141046 0.324250 0.325273 
+ 
+0.099506 0.106283 0.236213 0.277193 0.280806 
+ 
+0.092007 0.096064 0.158593 0.326884 0.326452 
+ 
+0.083853 0.089564 0.231869 0.297199 0.297514 
+ 
+{Operation terminated by user during <a href="matlab:helpUtils.errorDocCallback('ops', '/home/ivan/Dropbox/Code/interaction/utilities/cvx/sdpt3/Solver/ops.m', 266)" style="font-weight:bold">ops</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/utilities/cvx/sdpt3/Solver/ops.m',266,0)">line 266</a>)
+
+In <a href="matlab:helpUtils.errorDocCallback('NTdirfun', '/home/ivan/Dropbox/Code/interaction/utilities/cvx/sdpt3/Solver/NTdirfun.m', 28)" style="font-weight:bold">NTdirfun</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/utilities/cvx/sdpt3/Solver/NTdirfun.m',28,0)">line 28</a>)
+          dZ(p) = ops(Rd(p),'-',Atyfun(pblk,At(p,:),[],[],dy));
+
+In <a href="matlab:helpUtils.errorDocCallback('NTpred', '/home/ivan/Dropbox/Code/interaction/utilities/cvx/sdpt3/Solver/NTpred.m', 66)" style="font-weight:bold">NTpred</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/utilities/cvx/sdpt3/Solver/NTpred.m',66,0)">line 66</a>)
+    [dX,dy,dZ] = NTdirfun(blk,At,par,Rd,EinvRc,xx,m);
+
+In <a href="matlab:helpUtils.errorDocCallback('sqlpmain', '/home/ivan/Dropbox/Code/interaction/utilities/cvx/sdpt3/Solver/sqlpmain.m', 344)" style="font-weight:bold">sqlpmain</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/utilities/cvx/sdpt3/Solver/sqlpmain.m',344,0)">line 344</a>)
+         [par,dX,dy,dZ,coeff,L,hRd] = ...
+
+In <a href="matlab:helpUtils.errorDocCallback('sqlp', '/home/ivan/Dropbox/Code/interaction/utilities/cvx/sdpt3/Solver/sqlp.m', 242)" style="font-weight:bold">sqlp</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/utilities/cvx/sdpt3/Solver/sqlp.m',242,0)">line 242</a>)
+   [obj,X3,y,Z3,info,runhist] = ...
+
+In <a href="matlab:helpUtils.errorDocCallback('cvx_run_solver', '/home/ivan/Dropbox/Code/interaction/utilities/cvx/lib/cvx_run_solver.m', 46)" style="font-weight:bold">cvx_run_solver</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/utilities/cvx/lib/cvx_run_solver.m',46,0)">line 46</a>)
+   [ varargout{1:nargout} ] = sfunc( inputs{:} );
+
+In <a href="matlab:helpUtils.errorDocCallback('cvx_sdpt3>solve', '/home/ivan/Dropbox/Code/interaction/utilities/cvx/shims/cvx_sdpt3.m', 355)" style="font-weight:bold">cvx_sdpt3>solve</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/utilities/cvx/shims/cvx_sdpt3.m',355,0)">line 355</a>)
+[ obj, xx, y, zz, info ] = cvx_run_solver( @sqlp, blk, Avec, Cvec, b, OPTIONS,
+'obj', 'x', 'y', 'z', 'info', settings, 5 ); %#ok
+
+In <a href="matlab:helpUtils.errorDocCallback('cvxprob/solve', '/home/ivan/Dropbox/Code/interaction/utilities/cvx/lib/@cvxprob/solve.m', 421)" style="font-weight:bold">cvxprob/solve</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/utilities/cvx/lib/@cvxprob/solve.m',421,0)">line 421</a>)
+            [ x, status, tprec, iters, y ] = shim.solve( At, b, c, cones, quiet,
+            prec, solv.settings );
+
+In <a href="matlab:helpUtils.errorDocCallback('cvx_end', '/home/ivan/Dropbox/Code/interaction/utilities/cvx/commands/cvx_end.m', 79)" style="font-weight:bold">cvx_end</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/utilities/cvx/commands/cvx_end.m',79,0)">line 79</a>)
+        solve( prob );
+
+In <a href="matlab:helpUtils.errorDocCallback('svmDual', '/home/ivan/Dropbox/Code/ML toolbox/SupervisedLearning/SVM/svmDual.m', 32)" style="font-weight:bold">svmDual</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/ML toolbox/SupervisedLearning/SVM/svmDual.m',32,0)">line 32</a>)
+cvx_end
+
+In <a href="matlab:helpUtils.errorDocCallback('trainSVMonlyKernel', '/home/ivan/Dropbox/Code/ML toolbox/SupervisedLearning/SVM/trainSVMonlyKernel.m', 17)" style="font-weight:bold">trainSVMonlyKernel</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/ML toolbox/SupervisedLearning/SVM/trainSVMonlyKernel.m',17,0)">line 17</a>)
+alpha=svmDual(K,y,C);
+
+In <a href="matlab:helpUtils.errorDocCallback('leaveOneOut', '/home/ivan/Dropbox/Code/interaction/experiments/MKSVM/leaveOneOut.m', 45)" style="font-weight:bold">leaveOneOut</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/experiments/MKSVM/leaveOneOut.m',45,0)">line 45</a>)
+        [predictors{k,1}]=trainSVMonlyKernel( smallKernel,y',C,method);
+
+In <a href="matlab:helpUtils.errorDocCallback('test', '/home/ivan/Dropbox/Code/interaction/experiments/MKSVM/test.m', 29)" style="font-weight:bold">test</a> (<a href="matlab: opentoline('/home/ivan/Dropbox/Code/interaction/experiments/MKSVM/test.m',29,0)">line 29</a>)
+    [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'QuiLane2009');
+} 
+clc
+diary('test.txt')

@@ -1,0 +1,26 @@
+Linear combination of the trajectories, velocities
+ with gaussian alignment kernel for sigma=0.1,1,10,100,1000
+ kernels are normalized K(i,j)=K(i,j)/sqrt(K(i,i)*K(j,j))
+method =
+
+QuiLane2009
+
+method=QuiLane2009 C=1.000000, accuracy=0.407407 
+
+method =
+
+QuiLane2009
+
+method=QuiLane2009 C=10.000000, accuracy=0.425926 
+
+method =
+
+QuiLane2009
+
+method=QuiLane2009 C=100.000000, accuracy=0.425926 
+
+method =
+
+QuiLane2009
+
+method=QuiLane2009 C=1000.000000, accuracy=0.425926 

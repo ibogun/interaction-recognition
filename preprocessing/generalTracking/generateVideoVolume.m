@@ -32,6 +32,3 @@ end
 clearvars -EXCEPT X;
 
 %% Run RPCA
-
-%[A, E, ~]=proximal_gradient_rpca(D',0.15);
-%[A, iterations, spr]=inexact_alm_mc(D,0.15);

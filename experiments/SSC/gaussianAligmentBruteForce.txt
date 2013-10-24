@@ -1,0 +1,79 @@
+Gaussian best alignment kernel
+sigma=0.001, lambda=0.001, miss=0.722222
+sigma=0.01, lambda=0.001, miss=0.722222
+sigma= 0.1, lambda=0.001, miss=0.722222
+sigma=   1, lambda=0.001, miss=0.722222
+sigma=  10, lambda=0.001, miss=0.722222
+sigma= 100, lambda=0.001, miss=0.722222
+sigma=1000, lambda=0.001, miss=0.722222
+sigma=10000, lambda=0.001, miss=0.722222
+sigma=100000, lambda=0.001, miss=0.722222
+sigma=0.001, lambda=0.01, miss=0.722222
+sigma=0.01, lambda=0.01, miss=0.722222
+sigma= 0.1, lambda=0.01, miss=0.722222
+sigma=   1, lambda=0.01, miss=0.722222
+sigma=  10, lambda=0.01, miss=0.722222
+sigma= 100, lambda=0.01, miss=0.722222
+sigma=1000, lambda=0.01, miss=0.722222
+sigma=10000, lambda=0.01, miss=0.722222
+sigma=100000, lambda=0.01, miss=0.722222
+sigma=0.001, lambda= 0.1, miss=0.722222
+sigma=0.01, lambda= 0.1, miss=0.722222
+sigma= 0.1, lambda= 0.1, miss=0.722222
+sigma=   1, lambda= 0.1, miss=0.722222
+sigma=  10, lambda= 0.1, miss=0.722222
+sigma= 100, lambda= 0.1, miss=0.722222
+sigma=1000, lambda= 0.1, miss=0.722222
+sigma=10000, lambda= 0.1, miss=0.722222
+sigma=100000, lambda= 0.1, miss=0.722222
+sigma=0.001, lambda=   1, miss=0.407407
+sigma=0.01, lambda=   1, miss=0.425926
+sigma= 0.1, lambda=   1, miss=0.407407
+sigma=   1, lambda=   1, miss=0.407407
+sigma=  10, lambda=   1, miss=0.351852
+sigma= 100, lambda=   1, miss=0.444444
+sigma=10000, lambda=   1, miss=0.407407
+sigma=0.001, lambda=  10, miss=0.444444
+sigma=0.01, lambda=  10, miss=0.444444
+sigma= 0.1, lambda=  10, miss=0.444444
+sigma=   1, lambda=  10, miss=0.481481
+sigma=  10, lambda=  10, miss=0.425926
+sigma= 100, lambda=  10, miss=0.5
+sigma=1000, lambda=  10, miss=0.518519
+sigma=100000, lambda=  10, miss=0.666667
+sigma=0.001, lambda= 100, miss=0.37037
+sigma=0.01, lambda= 100, miss=0.37037
+sigma= 0.1, lambda= 100, miss=0.37037
+sigma=   1, lambda= 100, miss=0.444444
+sigma=  10, lambda= 100, miss=0.37037
+sigma= 100, lambda= 100, miss=0.425926
+sigma=1000, lambda= 100, miss=0.611111
+sigma=10000, lambda= 100, miss=0.722222
+sigma=100000, lambda= 100, miss=0.740741
+sigma=0.001, lambda=1000, miss=0.37037
+sigma=0.01, lambda=1000, miss=0.37037
+sigma= 0.1, lambda=1000, miss=0.37037
+sigma=   1, lambda=1000, miss=0.444444
+sigma=  10, lambda=1000, miss=0.388889
+sigma= 100, lambda=1000, miss=0.407407
+sigma=1000, lambda=1000, miss=0.407407
+sigma=10000, lambda=1000, miss=0.462963
+sigma=100000, lambda=1000, miss=0.611111
+sigma=0.001, lambda=10000, miss=0.37037
+sigma=0.01, lambda=10000, miss=0.37037
+sigma= 0.1, lambda=10000, miss=0.37037
+sigma=   1, lambda=10000, miss=0.444444
+sigma=  10, lambda=10000, miss=0.388889
+sigma= 100, lambda=10000, miss=0.407407
+sigma=1000, lambda=10000, miss=0.407407
+sigma=10000, lambda=10000, miss=0.407407
+sigma=100000, lambda=10000, miss=0.407407
+sigma=0.001, lambda=100000, miss=0.37037
+sigma=0.01, lambda=100000, miss=0.37037
+sigma= 0.1, lambda=100000, miss=0.37037
+sigma=   1, lambda=100000, miss=0.444444
+sigma=  10, lambda=100000, miss=0.388889
+sigma= 100, lambda=100000, miss=0.388889
+sigma=1000, lambda=100000, miss=0.388889
+sigma=10000, lambda=100000, miss=0.407407
+sigma=100000, lambda=100000, miss=0.37037

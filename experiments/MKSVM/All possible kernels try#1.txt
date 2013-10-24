@@ -1,0 +1,3 @@
+Linear combination of the trajectories, velocities
+ with gaussian alignment kernel for sigma=0.1,1,10,100,1000
+ kernels are normalized K(i,j)=K(i,j)/sqrt(K(i,i)*K(j,j))

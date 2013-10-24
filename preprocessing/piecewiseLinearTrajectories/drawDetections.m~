@@ -1,8 +1,0 @@
-imagesFolder='/host/Users/ibogun2010/datasets/Gupta/frames/c01/';
-f=dir(imagesFolder);
-f=f(3:end);
-
-for i=1:23
-   detection=find(dGroup(1,:),1,'first');
-    allD
-end

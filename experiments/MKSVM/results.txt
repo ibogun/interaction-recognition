@@ -1,0 +1,4960 @@
+This file contains results of the leave-one-out cross validation 
+ using kernel SVM with unbalanced data 
+ with trajectories, velocities and unsupervised object recognition kernel from annotated trajectories
+
+
+
+        [predictors{k,1},alpha]=trainSVM( data,y',ker,C,method);
+
+Error in test (line 9)
+[accuracy, predictedValues]=leaveOneOut(X,groundTruth,C,kernel,'QuiLane2009');
+ 
+>> test
+Current iteration 1 out of 54 
+>> test
+Current iteration 1 out of 54 
+K>> X{1,2}
+
+ans =
+
+    0.1843    0.1463
+    0.1880    0.1146
+    0.1920    0.0871
+    0.1959    0.0629
+    0.1996    0.0418
+    0.2028    0.0236
+    0.2057    0.0084
+    0.2082    0.0031
+    0.2105    0.0107
+    0.2127    0.0137
+    0.2148    0.0111
+    0.2169    0.0017
+    0.2187    0.0151
+    0.2203    0.0403
+    0.2213    0.0745
+    0.2219    0.1186
+    0.2219    0.1727
+    0.2214    0.2366
+    0.2204    0.3088
+    0.2187    0.3871
+
+K>> X{2,1}
+
+ans =
+
+   -0.0014   -0.0164
+   -0.0005   -0.0120
+    0.0004   -0.0086
+    0.0010   -0.0058
+    0.0014   -0.0034
+    0.0017   -0.0013
+    0.0019    0.0007
+    0.0021    0.0034
+    0.0024    0.0068
+    0.0028    0.0112
+    0.0034    0.0167
+    0.0041    0.0233
+    0.0046    0.0310
+    0.0050    0.0396
+    0.0048    0.0485
+    0.0041    0.0571
+    0.0028    0.0645
+
+K>> X{3,1}
+Index exceeds matrix dimensions.
+ 
+K>> X{3,1}=1
+
+X = 
+
+  Columns 1 through 5
+
+    [18x2 double]    [20x2 double]    [92x2 double]    [110x2 double]    [64x2 double]
+    [17x2 double]    [19x2 double]    [91x2 double]    [109x2 double]    [63x2 double]
+    [          1]               []               []                []               []
+
+  Columns 6 through 10
+
+    [27x2 double]    [19x2 double]    [91x2 double]    [62x2 double]    [38x2 double]
+    [26x2 double]    [18x2 double]    [90x2 double]    [61x2 double]    [37x2 double]
+               []               []               []               []               []
+
+  Columns 11 through 15
+
+    [72x2 double]    [33x2 double]    [109x2 double]    [49x2 double]    [85x2 double]
+    [71x2 double]    [32x2 double]    [108x2 double]    [48x2 double]    [84x2 double]
+               []               []                []               []               []
+
+  Columns 16 through 20
+
+    [34x2 double]    [73x2 double]    [45x2 double]    [76x2 double]    [109x2 double]
+    [33x2 double]    [72x2 double]    [44x2 double]    [75x2 double]    [108x2 double]
+               []               []               []               []                []
+
+  Columns 21 through 25
+
+    [43x2 double]    [85x2 double]    [35x2 double]    [27x2 double]    [40x2 double]
+    [42x2 double]    [84x2 double]    [34x2 double]    [26x2 double]    [39x2 double]
+               []               []               []               []               []
+
+  Columns 26 through 30
+
+    [95x2 double]    [52x2 double]    [81x2 double]    [90x2 double]    [28x2 double]
+    [94x2 double]    [51x2 double]    [80x2 double]    [89x2 double]    [27x2 double]
+               []               []               []               []               []
+
+  Columns 31 through 35
+
+    [91x2 double]    [41x2 double]    [80x2 double]    [48x2 double]    [22x2 double]
+    [90x2 double]    [40x2 double]    [79x2 double]    [47x2 double]    [21x2 double]
+               []               []               []               []               []
+
+  Columns 36 through 40
+
+    [56x2 double]    [79x2 double]    [14x2 double]    [136x2 double]    [76x2 double]
+    [55x2 double]    [78x2 double]    [13x2 double]    [135x2 double]    [75x2 double]
+               []               []               []                []               []
+
+  Columns 41 through 45
+
+    [89x2 double]    [48x2 double]    [73x2 double]    [21x2 double]    [54x2 double]
+    [88x2 double]    [47x2 double]    [72x2 double]    [20x2 double]    [53x2 double]
+               []               []               []               []               []
+
+  Columns 46 through 50
+
+    [66x2 double]    [34x2 double]    [55x2 double]    [47x2 double]    [44x2 double]
+    [65x2 double]    [33x2 double]    [54x2 double]    [46x2 double]    [43x2 double]
+               []               []               []               []               []
+
+  Columns 51 through 54
+
+    [60x2 double]    [75x2 double]    [88x2 double]    [24x2 double]
+    [59x2 double]    [74x2 double]    [87x2 double]    [23x2 double]
+               []               []               []               []
+
+K>> X{3,1}
+
+ans =
+
+     1
+
+K>> X(:,1)
+
+ans = 
+
+    [18x2 double]
+    [17x2 double]
+    [          1]
+
+>> test
+Current iteration 1 out of 54 
+24  f=getHyperplane(X,alpha,kernel,weights,y);
+Index exceeds matrix dimensions.
+
+Error in getHyperplane/sumOverSupportVectors (line 56)
+                    ker=ker+weights(j)*x{j}(idx(i));
+
+Error in getHyperplane>@(x)sumOverSupportVectors(X,alpha,kernelFn,weights,y,x) (line
+22)
+f=@(x) sumOverSupportVectors(X,alpha,kernelFn,weights,y,x);
+
+Error in getHyperplane (line 37)
+        minSupport=min(minSupport,f(X(:,j)));
+
+Error in trainSVM (line 24)
+f=getHyperplane(X,alpha,kernel,weights,y);
+
+Error in leaveOneOut (line 36)
+        [predictors{k,1},alpha]=trainSVM( data,y',ker,C,method);
+
+Error in test (line 9)
+[accuracy, predictedValues]=leaveOneOut(X,groundTruth,C,kernel,'QuiLane2009');
+ 
+>> test
+Current iteration 1 out of 54 
+24  f=getHyperplane(X,alpha,kernel,weights,y);
+>> test
+Current iteration 1 out of 54 
+>> test
+Current iteration 1 out of 54 
+24  f=getHyperplane(X,alpha,kernel,weights,y);
+22  f=@(x) sumOverSupportVectors(X,alpha,kernelFn,weights,y,x);
+24  if nargin<5
+28  n=length(y);
+30  maxSupport=0;
+31  minSupport=0;
+33  for j=1:n
+34      if (y(j)==-1)
+36      else
+37          minSupport=min(minSupport,f(X(:,j)));
+Index exceeds matrix dimensions.
+
+Error in getHyperplane/sumOverSupportVectors (line 56)
+                    ker=ker+weights(j)*x{j}(idx(i));
+
+Error in getHyperplane>@(x)sumOverSupportVectors(X,alpha,kernelFn,weights,y,x) (line
+22)
+f=@(x) sumOverSupportVectors(X,alpha,kernelFn,weights,y,x);
+
+Error in getHyperplane (line 37)
+        minSupport=min(minSupport,f(X(:,j)));
+
+Error in trainSVM (line 24)
+f=getHyperplane(X,alpha,kernel,weights,y);
+
+Error in leaveOneOut (line 39)
+        [predictors{k,1},alpha]=trainSVM( data,y',ker,C,method);
+
+Error in test (line 9)
+[accuracy, predictedValues]=leaveOneOut(X,groundTruth,C,kernel,'QuiLane2009');
+ 
+>> test
+Undefined function or variable "m".
+
+Error in leaveOneOut (line 13)
+    for j=1:m
+
+Error in test (line 9)
+[accuracy, predictedValues]=leaveOneOut(X,groundTruth,C,kernel,'QuiLane2009');
+ 
+>> test
+Undefined variable ker.
+
+Error in leaveOneOut (line 15)
+            x=ker{j}(i,:);
+
+Error in test (line 9)
+[accuracy, predictedValues]=leaveOneOut(X,groundTruth,C,kernel,'QuiLane2009');
+ 
+>> test
+Current iteration 1 out of 54 
+24  f=getHyperplane(X,alpha,kernel,weights,y);
+26  end
+End of function trainSVM.
+52          predictedValues(i,k)=predictors{k,1}(X(:,i));
+55      end
+30          y=-ones(1,54);
+31          y(groundTruth==k)=1;
+36          ker=kernel;
+37          for j=1:m
+38              if (isa(kernel{j},'double'))
+45          end
+38              if (isa(kernel{j},'double'))
+45          end
+38              if (isa(kernel{j},'double'))
+42                  ker{j}(i,:)=[];
+43                  ker{j}(:,i)=[];
+44              end
+45          end
+47          data=X;
+48          y(i)=[];
+49          data(:,i)=[];
+51          [predictors{k,1},alpha]=trainSVM( data,y',ker,C,method);
+24  f=getHyperplane(X,alpha,kernel,weights,y);
+26  end
+>> test
+Current iteration 1 out of 54 
+Operation terminated by user during ops (line 53)
+
+
+In sqlpmain (line 625)
+      ZpATynorm = ops(ZpATy,'norm');
+
+In sqlp (line 242)
+   [obj,X3,y,Z3,info,runhist] = ...
+
+In cvx_run_solver (line 46)
+   [ varargout{1:nargout} ] = sfunc( inputs{:} );
+
+In cvx_sdpt3>solve (line 355)
+[ obj, xx, y, zz, info ] = cvx_run_solver( @sqlp, blk, Avec, Cvec, b, OPTIONS, 'obj',
+'x', 'y', 'z', 'info', settings, 5 ); %#ok
+
+In cvxprob/solve (line 421)
+            [ x, status, tprec, iters, y ] = shim.solve( At, b, c, cones, quiet, prec,
+            solv.settings );
+
+In cvx_end (line 79)
+        solve( prob );
+
+In svmDual (line 32)
+cvx_end
+
+In trainSVM (line 22)
+alpha=svmDual(K,y,C);
+
+In leaveOneOut (line 51)
+        [predictors{k,1},alpha]=trainSVM( data,y',ker,C,method);
+
+In test (line 9)
+[accuracy, predictedValues]=leaveOneOut(X,groundTruth,C,kernel,'QuiLane2009');
+ 
+>> test
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 974.097722 seconds.
+>> test
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 595.408258 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 580.749957 seconds.
+>> test
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 502.934835 seconds.
+method=QuiLane2009 C=0.100000, sigma=1.000000, accuracy=0.777778Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 570.378435 seconds.
+method=Lanckriet2004a C=0.100000, sigma=1.000000, accuracy=0.759259Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 573.228596 seconds.
+method=Cortes2010a C=0.100000, sigma=1.000000, accuracy=0.722222Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 508.185886 seconds.
+method=QuiLane2009 C=0.100000, sigma=100.000000, accuracy=0.592593Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 574.176548 seconds.
+method=Lanckriet2004a C=0.100000, sigma=100.000000, accuracy=0.481481Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 572.521379 seconds.
+method=Cortes2010a C=0.100000, sigma=100.000000, accuracy=0.537037Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 511.739638 seconds.
+method=QuiLane2009 C=1.000000, sigma=1.000000, accuracy=0.777778Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 576.773817 seconds.
+method=Lanckriet2004a C=1.000000, sigma=1.000000, accuracy=0.833333Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 604.248298 seconds.
+method=Cortes2010a C=1.000000, sigma=1.000000, accuracy=0.796296Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 522.447063 seconds.
+method=QuiLane2009 C=1.000000, sigma=100.000000, accuracy=0.592593Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 609.318591 seconds.
+method=Lanckriet2004a C=1.000000, sigma=100.000000, accuracy=0.481481Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 603.380416 seconds.
+method=Cortes2010a C=1.000000, sigma=100.000000, accuracy=0.537037Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 546.296333 seconds.
+method=QuiLane2009 C=10.000000, sigma=1.000000, accuracy=0.888889Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 597.963938 seconds.
+method=Lanckriet2004a C=10.000000, sigma=1.000000, accuracy=0.870370Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 601.833607 seconds.
+method=Cortes2010a C=10.000000, sigma=1.000000, accuracy=0.574074Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 675.494892 seconds.
+method=QuiLane2009 C=10.000000, sigma=100.000000, accuracy=0.629630Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 630.352423 seconds.
+method=Lanckriet2004a C=10.000000, sigma=100.000000, accuracy=0.648148Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 697.058666 seconds.
+method=Cortes2010a C=10.000000, sigma=100.000000, accuracy=0.388889Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 559.975145 seconds.
+method=QuiLane2009 C=100.000000, sigma=1.000000, accuracy=0.888889Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 653.125198 seconds.
+method=Lanckriet2004a C=100.000000, sigma=1.000000, accuracy=0.851852Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 703.543381 seconds.
+method=Cortes2010a C=100.000000, sigma=1.000000, accuracy=0.574074Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 605.122808 seconds.
+method=QuiLane2009 C=100.000000, sigma=100.000000, accuracy=0.296296Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Operation terminated by user during
+getKernel>@(x,y)exp(-(pow_p(norm(alignmentMex(x',y')),2))/(2*params(1)^2)) (line 45)
+
+
+In getHyperplane/sumOverSupportVectors (line 58)
+                    ker=ker+weights(j)*kernelFn{j}(X{j,idx(i)},x{j});
+
+In getHyperplane>@(x)sumOverSupportVectors(X,alpha,kernelFn,weights,y,x) (line 22)
+f=@(x) sumOverSupportVectors(X,alpha,kernelFn,weights,y,x);
+
+In getHyperplane (line 35)
+        maxSupport=max(maxSupport,f(X(:,j)));
+
+In trainSVM (line 24)
+f=getHyperplane(X,alpha,kernel,weights,y);
+
+In leaveOneOut (line 51)
+        [predictors{k,1},alpha]=trainSVM( data,y',ker,C,method);
+
+In test (line 29)
+        [accuracy,
+        predictedValues]=leaveOneOut(X,groundTruth,C(i),kernel,'Lanckriet2004a');
+ 
+>> test
+Current iteration 1 out of 54 
+Error using trainSVMonlyKernel
+Too many input arguments.
+
+Error in leaveOneOut (line 51)
+        [predictors{k,1}]=trainSVMonlyKernel( data,y',ker,C,method);
+
+Error in test (line 24)
+        [accuracy,
+        predictedValues]=leaveOneOut(X,groundTruth,C(i),kernel,'QuiLane2009');
+ 
+>> test
+Current iteration 1 out of 54 
+Error using trainSVMonlyKernel
+Too many input arguments.
+
+Error in leaveOneOut (line 51)
+        [predictors{k,1}]=trainSVMonlyKernel( data,y',ker,C,method);
+
+Error in test (line 24)
+        [accuracy,
+        predictedValues]=leaveOneOut(X,groundTruth,C(i),kernel,'QuiLane2009');
+ 
+>> test
+>> test
+Error: File: leaveOneOut.m Line: 1 Column: 1
+The variable kernel was mentioned more than once as an input.
+
+Error in test (line 24)
+        [accuracy, ~]=leaveOneOut(kernel,groundTruth,C(i),'QuiLane2009');
+ 
+>> test
+>> test
+>> test
+Current iteration 1 out of 54 
+Undefined function or variable 'm'.
+
+Error in leaveOneOut (line 37)
+        for j=1:m
+
+Error in test (line 24)
+        [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'QuiLane2009');
+ 
+>> test
+Current iteration 1 out of 54 
+>> test
+Current iteration 1 out of 54 
+K>> a=squeeze(test)
+
+a =
+
+    1.0000    1.0000    0.3835
+    0.0929    0.9765    0.1609
+         0    0.1760    0.1609
+         0    0.0000    0.1609
+    0.0000    0.8457    0.3665
+    0.0009    0.9439    0.3665
+    0.0000    0.9367    0.0000
+         0    0.8475    0.4452
+    0.0000    0.8751    0.3662
+    0.0000    0.9009    0.4726
+    0.0000    0.1669    0.1609
+    0.0001    0.9199    0.3665
+    0.0000    0.7404    0.3665
+    0.0000    0.9345    0.0000
+    0.0000    0.0001    0.1609
+    0.0000    0.9783    0.4725
+         0    0.8252    0.4641
+    0.0000    0.9161    0.3665
+    0.0000    0.7901    0.0000
+         0    0.0023    0.1609
+    0.0000    0.9143    0.0001
+         0    0.8659    0.4675
+    0.0000    0.9490    0.0004
+    0.0000    0.8952    0.1609
+    0.0000    0.9334    0.0082
+    0.0000    0.8442    0.3561
+    0.0000    0.5451    0.4688
+    0.0000    0.0874    0.1323
+    0.0000    0.8205    0.0000
+    0.0000    0.9789    0.4726
+         0    0.2839    0.1617
+    0.0000    0.9038    0.4285
+    0.0000    0.8449    0.0000
+         0    0.9200    0.0162
+    0.0011    0.9114    0.0000
+    0.0000    0.8437    0.0000
+    0.0000    0.9040    0.3665
+    0.0561    0.9969    0.4692
+         0    0.0000    0.1609
+         0    0.7103    0.4692
+    0.0000    0.8181    0.3665
+         0    0.9182    0.0540
+    0.0000    0.8486    0.3665
+    0.0000    0.9737    0.4726
+    0.0000    0.8856    0.0000
+    0.0000    0.2782    0.1609
+    0.0000    0.9021    0.3312
+    0.0000    0.9053    0.4726
+    0.0000    0.9516    0.0000
+    0.0000    0.9577    0.1551
+    0.0000    0.8706    0.4726
+    0.0000    0.1403    0.1610
+    0.0000    0.9041    0.1610
+    0.0000    0.9581    0.4720
+
+>> test
+Current iteration 1 out of 54 
+7   weights=getWeightsMKL(kernel,y,method);
+8   K=sumUpKernels(kernel,weights);
+10  minEig=min(eig(K));
+11  n=size(K,1);
+12  if (minEig<0)
+16  alpha=svmDual(K,y,C);
+18  f=getHyperplaneOnlyKernel(X,alpha,kernel,weights,y);
+Undefined function or variable 'X'.
+
+Error in trainSVMonlyKernel (line 18)
+f=getHyperplaneOnlyKernel(X,alpha,kernel,weights,y);
+
+Error in leaveOneOut (line 43)
+        [predictors{k,1}]=trainSVMonlyKernel( smallKernel,y',C,method);
+
+Error in test (line 24)
+        [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'QuiLane2009');
+ 
+>> test
+Current iteration 1 out of 54 
+7   weights=getWeightsMKL(kernel,y,method);
+Undefined function or variable 'kernelFn'.
+
+Error in getHyperplaneOnlyKernel/sumOverSupportVectors (line 45)
+        m=length(kernelFn);
+
+Error in getHyperplaneOnlyKernel>@(x)sumOverSupportVectors(alpha,weights,y,x) (line 22)
+f=@(x) sumOverSupportVectors(alpha,weights,y,x);
+
+Error in getHyperplaneOnlyKernel>@(x)f(x)+b (line 39)
+hyperplane=@(x) f(x)+b;
+
+Error in leaveOneOut (line 44)
+        predictedValues(i,k)=predictors{k,1}(test);
+
+Error in test (line 24)
+        [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'QuiLane2009');
+ 
+>> test
+Current iteration 1 out of 54 
+18  f=getHyperplaneOnlyKernel(alpha,kernel,weights,y);
+Undefined function or variable 'kernelFn'.
+
+Error in getHyperplaneOnlyKernel/sumOverSupportVectors (line 44)
+        m=length(kernelFn);
+
+Error in getHyperplaneOnlyKernel>@(x)sumOverSupportVectors(alpha,weights,y,x) (line 22)
+f=@(x) sumOverSupportVectors(alpha,weights,y,x);
+
+Error in getHyperplaneOnlyKernel (line 33)
+        minSupport=min(minSupport,f(squeeze(kernel(j,:,:))));
+
+Error in trainSVMonlyKernel (line 18)
+f=getHyperplaneOnlyKernel(alpha,kernel,weights,y);
+
+Error in leaveOneOut (line 43)
+        [predictors{k,1}]=trainSVMonlyKernel( smallKernel,y',C,method);
+
+Error in test (line 24)
+        [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'QuiLane2009');
+ 
+>> test
+Current iteration 1 out of 54 
+7   weights=getWeightsMKL(kernel,y,method);
+18  f=getHyperplaneOnlyKernel(alpha,kernel,weights,y);
+Undefined function or variable 'kernelFn'.
+
+Error in getHyperplaneOnlyKernel/sumOverSupportVectors (line 44)
+        m=length(kernelFn);
+
+Error in getHyperplaneOnlyKernel>@(x)sumOverSupportVectors(alpha,weights,y,x) (line 22)
+f=@(x) sumOverSupportVectors(alpha,weights,y,x);
+
+Error in getHyperplaneOnlyKernel (line 33)
+        minSupport=min(minSupport,f(squeeze(kernel(j,:,:))));
+
+Error in trainSVMonlyKernel (line 18)
+f=getHyperplaneOnlyKernel(alpha,kernel,weights,y);
+
+Error in leaveOneOut (line 43)
+        [predictors{k,1}]=trainSVMonlyKernel( smallKernel,y',C,method);
+
+Error in test (line 24)
+        [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'QuiLane2009');
+ 
+>> test
+Current iteration 1 out of 54 
+18  f=getHyperplaneOnlyKernel(alpha,kernel,weights,y);
+22  f=@(x) sumOverSupportVectors(alpha,weights,y,x);
+24  n=length(y);
+26  maxSupport=0;
+27  minSupport=0;
+29  for j=1:n
+30      if (y(j)==-1)
+32      else
+33          minSupport=min(minSupport,f(squeeze(kernel(j,:,:))));
+Undefined function or variable 'kernelFn'.
+
+Error in getHyperplaneOnlyKernel/sumOverSupportVectors (line 44)
+        m=length(kernelFn);
+
+Error in getHyperplaneOnlyKernel>@(x)sumOverSupportVectors(alpha,weights,y,x) (line 22)
+f=@(x) sumOverSupportVectors(alpha,weights,y,x);
+
+Error in getHyperplaneOnlyKernel (line 33)
+        minSupport=min(minSupport,f(squeeze(kernel(j,:,:))));
+
+Error in trainSVMonlyKernel (line 18)
+f=getHyperplaneOnlyKernel(alpha,kernel,weights,y);
+
+Error in leaveOneOut (line 43)
+        [predictors{k,1}]=trainSVMonlyKernel( smallKernel,y',C,method);
+
+Error in test (line 24)
+        [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'QuiLane2009');
+ 
+>> test
+Current iteration 1 out of 54 
+18  f=getHyperplaneOnlyKernel(alpha,kernel,weights,y);
+>> test
+Current iteration 1 out of 54 
+18  f=getHyperplaneOnlyKernel(alpha,kernel,weights,y);
+22  f=@(x) sumOverSupportVectors(alpha,weights,y,x);
+24  n=length(y);
+26  maxSupport=0;
+27  minSupport=0;
+29  for j=1:n
+30      if (y(j)==-1)
+32      else
+33          minSupport=min(minSupport,f(squeeze(kernel(j,:,:))));
+K>> f(squeeze(kernel(j,:,:)))
+
+ans =
+
+    0.0141
+
+>> test
+Current iteration 1 out of 54 
+38  hyperplane=@(x) f(x)+b;
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Operation terminated by user during ops (line 340)
+
+
+In sqlpmain (line 525)
+            [Zchol,indef(2)] = blkcholfun(blk,ops(Z,'+',dZ,dstep));
+
+In sqlp (line 242)
+   [obj,X3,y,Z3,info,runhist] = ...
+
+In cvx_run_solver (line 46)
+   [ varargout{1:nargout} ] = sfunc( inputs{:} );
+
+In cvx_sdpt3>solve (line 355)
+[ obj, xx, y, zz, info ] = cvx_run_solver( @sqlp, blk, Avec, Cvec, b, OPTIONS, 'obj',
+'x', 'y', 'z', 'info', settings, 5 ); %#ok
+
+In cvxprob/solve (line 421)
+            [ x, status, tprec, iters, y ] = shim.solve( At, b, c, cones, quiet, prec,
+            solv.settings );
+
+In cvx_end (line 79)
+        solve( prob );
+
+In svmDual (line 32)
+cvx_end
+
+In trainSVMonlyKernel (line 16)
+alpha=svmDual(K,y,C);
+
+In leaveOneOut (line 43)
+        [predictors{k,1}]=trainSVMonlyKernel( smallKernel,y',C,method);
+
+In test (line 24)
+        [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'QuiLane2009');
+ 
+>> test
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 118.242143 seconds.
+method=QuiLane2009 C=0.100000, sigma=0.100000, accuracy=0.240741Error using leaveOneOut
+Too many input arguments.
+
+Error in test (line 29)
+        [accuracy, ~]=leaveOneOut(X,groundTruth,C(i),kernel,'Lanckriet2004a');
+ 
+>> test
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 291.168964 seconds.
+method=QuiLane2009 C=0.100000, sigma=0.100000, accuracy=0.240741Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 430.231858 seconds.
+method=Lanckriet2004a C=0.100000, sigma=0.100000, accuracy=0.222222Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 445.398022 seconds.
+method=Cortes2010a C=0.100000, sigma=0.100000, accuracy=0.277778Elapsed time is 445.398694 seconds.
+>> test
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 121.653892 seconds.
+method=QuiLane2009 C=0.100000, sigma=0.100000, accuracy=0.240741Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 184.082925 seconds.
+method=Lanckriet2004a C=0.100000, sigma=0.100000, accuracy=0.222222Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 188.525439 seconds.
+method=Cortes2010a C=0.100000, sigma=0.100000, accuracy=0.277778Elapsed time is 188.526049 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 121.912076 seconds.
+method=QuiLane2009 C=0.100000, sigma=1.000000, accuracy=0.333333Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 188.607129 seconds.
+method=Lanckriet2004a C=0.100000, sigma=1.000000, accuracy=0.333333Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 191.137103 seconds.
+method=Cortes2010a C=0.100000, sigma=1.000000, accuracy=0.222222Elapsed time is 191.137449 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 121.190473 seconds.
+method=QuiLane2009 C=0.100000, sigma=100.000000, accuracy=0.259259Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 205.318677 seconds.
+method=Lanckriet2004a C=0.100000, sigma=100.000000, accuracy=0.314815Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 191.609140 seconds.
+method=Cortes2010a C=0.100000, sigma=100.000000, accuracy=0.277778Elapsed time is 191.609430 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 126.860250 seconds.
+method=QuiLane2009 C=1.000000, sigma=0.100000, accuracy=0.203704Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 201.121382 seconds.
+method=Lanckriet2004a C=1.000000, sigma=0.100000, accuracy=0.148148Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 212.366799 seconds.
+method=Cortes2010a C=1.000000, sigma=0.100000, accuracy=0.240741Elapsed time is 212.367176 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 145.070971 seconds.
+method=QuiLane2009 C=1.000000, sigma=1.000000, accuracy=0.277778Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Operation terminated by user during steplength (line 20)
+
+
+In sqlpmain (line 373)
+      Zstep = steplength(blk,Z,dZ,Zchol,invZchol);
+
+In sqlp (line 242)
+   [obj,X3,y,Z3,info,runhist] = ...
+
+In cvx_run_solver (line 46)
+   [ varargout{1:nargout} ] = sfunc( inputs{:} );
+
+In cvx_sdpt3>solve (line 355)
+[ obj, xx, y, zz, info ] = cvx_run_solver( @sqlp, blk, Avec, Cvec, b, OPTIONS, 'obj',
+'x', 'y', 'z', 'info', settings, 5 ); %#ok
+
+In cvxprob/solve (line 421)
+            [ x, status, tprec, iters, y ] = shim.solve( At, b, c, cones, quiet, prec,
+            solv.settings );
+
+In cvx_end (line 79)
+        solve( prob );
+
+In svmDual (line 32)
+cvx_end
+
+In trainSVMonlyKernel (line 16)
+alpha=svmDual(K,y,C);
+
+In leaveOneOut (line 43)
+        [predictors{k,1}]=trainSVMonlyKernel( smallKernel,y',C,method);
+
+In test (line 30)
+        [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'Lanckriet2004a');
+ 
+>> test
+Current iteration 1 out of 54 
+7   weights=getWeightsMKL(kernel,y,method);
+8   K=sumUpKernels(kernel,weights);
+10  minEig=min(eig(K));
+11  n=size(K,1);
+12  if (minEig<0)
+16  alpha=svmDual(K,y,C);
+18  f=getHyperplaneOnlyKernel(alpha,kernel,weights,y);
+22  f=@(x) sumOverSupportVectors(alpha,weights,y,x);
+24  n=length(y);
+26  maxSupport=0;
+27  minSupport=0;
+29  for j=1:n
+30      if (y(j)==-1)
+32      else
+33          minSupport=min(minSupport,f(squeeze(kernel(j,:,:))));
+17  if nargin==0 
+>> test
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 131.810581 seconds.
+method=QuiLane2009 C=0.100000, sigma=0.100000, accuracy=0.666667Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 199.656246 seconds.
+method=Lanckriet2004a C=0.100000, sigma=0.100000, accuracy=0.648148Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 209.397220 seconds.
+method=Cortes2010a C=0.100000, sigma=0.100000, accuracy=0.722222Elapsed time is 209.397590 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 116.231981 seconds.
+method=QuiLane2009 C=0.100000, sigma=1.000000, accuracy=0.833333Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 181.725694 seconds.
+method=Lanckriet2004a C=0.100000, sigma=1.000000, accuracy=0.740741Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 184.488636 seconds.
+method=Cortes2010a C=0.100000, sigma=1.000000, accuracy=0.759259Elapsed time is 184.489030 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 118.683220 seconds.
+method=QuiLane2009 C=0.100000, sigma=100.000000, accuracy=0.629630Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 185.368605 seconds.
+method=Lanckriet2004a C=0.100000, sigma=100.000000, accuracy=0.518519Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 183.469054 seconds.
+method=Cortes2010a C=0.100000, sigma=100.000000, accuracy=0.592593Elapsed time is 183.469397 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 121.902761 seconds.
+method=QuiLane2009 C=1.000000, sigma=0.100000, accuracy=0.666667Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 188.869540 seconds.
+method=Lanckriet2004a C=1.000000, sigma=0.100000, accuracy=0.648148Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 193.114694 seconds.
+method=Cortes2010a C=1.000000, sigma=0.100000, accuracy=0.796296Elapsed time is 193.115042 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 123.030983 seconds.
+method=QuiLane2009 C=1.000000, sigma=1.000000, accuracy=0.851852Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 188.249525 seconds.
+method=Lanckriet2004a C=1.000000, sigma=1.000000, accuracy=0.740741Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 190.187248 seconds.
+method=Cortes2010a C=1.000000, sigma=1.000000, accuracy=0.870370Elapsed time is 190.187618 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 123.920437 seconds.
+method=QuiLane2009 C=1.000000, sigma=100.000000, accuracy=0.629630Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 190.578146 seconds.
+method=Lanckriet2004a C=1.000000, sigma=100.000000, accuracy=0.518519Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 191.227507 seconds.
+method=Cortes2010a C=1.000000, sigma=100.000000, accuracy=0.592593Elapsed time is 191.227864 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 145.463615 seconds.
+method=QuiLane2009 C=10.000000, sigma=0.100000, accuracy=0.796296Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 201.315824 seconds.
+method=Lanckriet2004a C=10.000000, sigma=0.100000, accuracy=0.814815Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 216.312233 seconds.
+method=Cortes2010a C=10.000000, sigma=0.100000, accuracy=0.814815Elapsed time is 216.312573 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 146.167212 seconds.
+method=QuiLane2009 C=10.000000, sigma=1.000000, accuracy=0.907407Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 210.879692 seconds.
+method=Lanckriet2004a C=10.000000, sigma=1.000000, accuracy=0.796296Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 217.194956 seconds.
+method=Cortes2010a C=10.000000, sigma=1.000000, accuracy=0.833333Elapsed time is 217.195289 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 131.745117 seconds.
+method=QuiLane2009 C=10.000000, sigma=100.000000, accuracy=0.759259Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 201.555261 seconds.
+method=Lanckriet2004a C=10.000000, sigma=100.000000, accuracy=0.648148Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 202.493338 seconds.
+method=Cortes2010a C=10.000000, sigma=100.000000, accuracy=0.851852Elapsed time is 202.493724 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 171.709586 seconds.
+method=QuiLane2009 C=100.000000, sigma=0.100000, accuracy=0.796296Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 231.911629 seconds.
+method=Lanckriet2004a C=100.000000, sigma=0.100000, accuracy=0.814815Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 241.730948 seconds.
+method=Cortes2010a C=100.000000, sigma=0.100000, accuracy=0.814815Elapsed time is 241.731283 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 170.506747 seconds.
+method=QuiLane2009 C=100.000000, sigma=1.000000, accuracy=0.907407Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 238.286036 seconds.
+method=Lanckriet2004a C=100.000000, sigma=1.000000, accuracy=0.796296Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 241.532836 seconds.
+method=Cortes2010a C=100.000000, sigma=1.000000, accuracy=0.833333Elapsed time is 241.533187 seconds.
+Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 147.042003 seconds.
+method=QuiLane2009 C=100.000000, sigma=100.000000, accuracy=0.833333Current iteration 1 out of 54 
+Current iteration 2 out of 54 
+Current iteration 3 out of 54 
+Current iteration 4 out of 54 
+Current iteration 5 out of 54 
+Current iteration 6 out of 54 
+Current iteration 7 out of 54 
+Current iteration 8 out of 54 
+Current iteration 9 out of 54 
+Current iteration 10 out of 54 
+Current iteration 11 out of 54 
+Current iteration 12 out of 54 
+Current iteration 13 out of 54 
+Current iteration 14 out of 54 
+Current iteration 15 out of 54 
+Current iteration 16 out of 54 
+Current iteration 17 out of 54 
+Current iteration 18 out of 54 
+Current iteration 19 out of 54 
+Current iteration 20 out of 54 
+Current iteration 21 out of 54 
+Current iteration 22 out of 54 
+Current iteration 23 out of 54 
+Current iteration 24 out of 54 
+Current iteration 25 out of 54 
+Current iteration 26 out of 54 
+Current iteration 27 out of 54 
+Current iteration 28 out of 54 
+Current iteration 29 out of 54 
+Current iteration 30 out of 54 
+Current iteration 31 out of 54 
+Current iteration 32 out of 54 
+Current iteration 33 out of 54 
+Current iteration 34 out of 54 
+Current iteration 35 out of 54 
+Current iteration 36 out of 54 
+Current iteration 37 out of 54 
+Current iteration 38 out of 54 
+Current iteration 39 out of 54 
+Current iteration 40 out of 54 
+Current iteration 41 out of 54 
+Current iteration 42 out of 54 
+Current iteration 43 out of 54 
+Current iteration 44 out of 54 
+Current iteration 45 out of 54 
+Current iteration 46 out of 54 
+Current iteration 47 out of 54 
+Current iteration 48 out of 54 
+Current iteration 49 out of 54 
+Current iteration 50 out of 54 
+Current iteration 51 out of 54 
+Current iteration 52 out of 54 
+Current iteration 53 out of 54 
+Current iteration 54 out of 54 
+Elapsed time is 219.510790 seconds.
+method=Lanckriet2004a C=100.000000, sigma=100.000000, accuracy=0.648148Current iteration 1 out of 54 
+
+Elapsed time is 214.576586 seconds.
+method=Cortes2010a C=100.000000, sigma=100.000000, accuracy=0.851852Elapsed time is 214.576922 seconds.
+>> 
