@@ -1,7 +1,0 @@
-function [forwardTracks,  ] = createForwardTracks(flow, detectionFolder )
-%CREATETRACKS Summary of this function goes here
-%   Detailed explanation goes here
-
-
-end
-

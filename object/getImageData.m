@@ -1,76 +1,33 @@
-clc;clear; close all;
+function [ vid ] = getImageData( id,videoNames )
+%GETIMAGEDATA Summary of this function goes here
+%   Detailed explanation goes here
 
-load trajectoriesCalculated;
-frameFolders='/host/Users/ibogun2010/datasets/Gupta/frames/';
-f=dir(frameFolders);
-f=f(3:end);
+if nargin<2
+    videoNames='/media/ibogun2010/OS/Users/ibogun2010/Documents/datasets/Gupta/frames/';
+end
+videos=dir(videoNames);
+videos=videos(3:end);
 
 
-% there are 264 doublet patches in the 60x60 image
-n1=264;
+%clearvars videoNames;
 
-w=30;
-h=30;
-
-n2=144;
-
-doubletsMatrix=zeros(n1*length(f),50);
-edgeMatrix=zeros(n2*length(f),25);
-
-c=1;
-c1=1;
-
-labelMapDoublets=1;
-labelMapEdges=1;
-
-for vid=1:length(f)
-    
-    vidName=strcat(frameFolders,f(vid).name);
-    frames=dir(vidName);
-    frames=frames(3:end);
-    
-    traj=trajectory(vid);
-    
-    
-    bestT=traj.bestT;
-    
-    I=imread(strcat(vidName,'/',frames(bestT).name));
-    [n,m,~]=size(I);
-    
-    x=traj.bestJ*2;
-    y=traj.bestI*2;
-    % hold on
-    % plot(x,y,'r.','MarkerSize',20)
-    
-    patch=I(max([y-h,1]):min([y+h-1,n]),max([x-w,1]):min([x+w-1,m]),:);
-    %imshow(patch);
-    
-    
-    doublets=getDoubletsFromPatch(patch);
-    edges=getEdgesFromPatch(patch);
-    
-    d=size(doublets,1);
-    d1=size(edges,1);
-    
-    doubletsMatrix(c:(c+d-1),:)=doublets;
-    edgeMatrix(c1:(c1+d1-1),:)=edges;
-    
-    c1=c1+d1;
-    c=c+d;
-    
-    labelMapDoublets=[labelMapDoublets;c];
-    labelMapEdges=[labelMapEdges;c1];
+for i=1:length(videos)
+    fullVideoNames{i}=strcat(videoNames,videos(i).name);
 end
 
-doubletsMatrix=doubletsMatrix(1:c,:);
-edgeMatrix=edgeMatrix(1:c1,:);
-
-%labelMapEdges
-
-clearvars -except doubletsMatrix edgeMatrix labelMapDoublets labelMapEdges;
 
 
+images=dir(fullVideoNames{id});
+images=images(3:end);
+
+n=length(images);
+
+for j=1:n
+    vid{j}=imread(strcat(fullVideoNames{id},'/',images(j).name));
+end
 
 
 
+
+end
 

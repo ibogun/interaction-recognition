@@ -19,10 +19,28 @@ m=size(kernel,3);
 %         end
 %     end
 % end
- display(method);
+display(method);
 for i=1:n
     predictors=cell(nClasses,1);
-   
+    
+    
+    smallKernel=kernel;
+    %for j=1:m
+    
+    if m==1
+        test=smallKernel(i,:)';
+        test(i,:)=[];
+        smallKernel(i,:)=[];
+        smallKernel(:,i)=[];
+    else
+        
+        
+        test=squeeze(smallKernel(i,:,:));
+        test(i,:)=[];
+        smallKernel(i,:,:)=[];
+        smallKernel(:,i,:)=[];
+        
+    end
     %fprintf('Current iteration %i out of %i \n',i,n);
     for k=1:nClasses
         
@@ -32,27 +50,22 @@ for i=1:n
         y(groundTruth==k)=1;
         
         
-        smallKernel=kernel;
-        %for j=1:m
-        test=squeeze(smallKernel(i,:,:));
-        test(i,:)=[];
-        smallKernel(i,:,:)=[];
-        smallKernel(:,i,:)=[];
+        
         %end
         
         y(i)=[];
         
-        [predictors{k,1}]=trainSVMonlyKernel( smallKernel,y',C,method);
+        [predictors{k,1},~,weights]=trainSVMonlyKernel( smallKernel,y',C,method);
         predictedValues(i,k)=predictors{k,1}(test);
         %fprintf('value for the %i classifier %g \n',k,predictedLabels(i,k));
         
     end
-    
+    a=1;
 end
 % find max labels
 [~,b]=max(predictedValues,[],2);
 % find accuracy
 accuracy=length(find(b==groundTruth'))/n;
-
+display(accuracy);
 end
 
