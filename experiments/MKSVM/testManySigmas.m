@@ -1,6 +1,6 @@
 %clc
-C=1;
-sigma=100;
+C=[10];
+sigma=[10];
 %sigma=[1 10 100];
 %sigma=1;
 load groundTruth;
@@ -34,7 +34,7 @@ for j=1:length(sigma)
     
     kernel{j}=getKernel('gaussianAlignment',sigma(j));
     kernel{j+length(sigma)}=getKernel('gaussianAlignment',sigma(j));
-    X(j,:)=Z(2,:);
+    X(j,:)=Z(1,:);
     Y(j,:)=Z(2,:);
     
 end
@@ -67,19 +67,24 @@ K=calculateKernel(X,kernel);
 
 %K=Kobj;
 %
+K1=ones(54);
+for i=1:size(K,3)
+   K1=K1.*K(:,:,i); 
+end
+
+K=K1;
 for i=1:length(C)
     
      
     [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'QuiLane2009');
     
-    fprintf(fid,'method=multiplication C=%f, accuracy=%f \n',C(i),accuracy);
-    
-        
+    fprintf(fid,'method=QuiLane2009 C=%f, accuracy=%f \n',C(i),accuracy);
+         
 %     [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'Lanckriet2004a');
 %     
 %     fprintf(fid,'method=Lanckriet2004a C=%f,  accuracy=%f \n',C(i),accuracy);
-%     
-%     [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'Cortes2010a');
+    
+%     [accuracy, ~]=leaveOneOutWithSpecialObjectKernel(K,groundTruth,C(i),'Cortes2010a');
 %     
 %     fprintf(fid,'method=Cortes2010a C=%f,  accuracy=%f \n',C(i),accuracy);
     

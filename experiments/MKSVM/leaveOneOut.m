@@ -55,7 +55,7 @@ for i=1:n
         
         y(i)=[];
         
-        [predictors{k,1},~,weights]=trainSVMonlyKernel( smallKernel,y',C,method);
+        [predictors{k,1},~,weights]=trainSVMonlyKernel(smallKernel,y',C,method);
         predictedValues(i,k)=predictors{k,1}(test);
         %fprintf('value for the %i classifier %g \n',k,predictedLabels(i,k));
         

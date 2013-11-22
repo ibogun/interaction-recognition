@@ -1,14 +1,14 @@
-load combinedED;
+load combinedObjectResults5Frames;
 load order;
 
-n=length(combinedED);
-
-pz=combinedED{1}.Pz_d;
+n=length(combinedDE);
+% 
+pz=combinedDE{1}.Pz_d;
 pz=(pz);
 for i=2:n
-    pz=pz+((combinedED{i}.Pz_d));
+    pz=pz.*((combinedDE{i}.Pz_d));
 end
-pz=combinedED{3}.Pz_d;
+pz=combinedED{2}.Pz_d;
 
 order=order';
 
@@ -32,4 +32,4 @@ end
 
 Kobj=getObjectKernel(new_pz);
 
-clearvars -except Kobj;
+%clearvars -except Kobj;
