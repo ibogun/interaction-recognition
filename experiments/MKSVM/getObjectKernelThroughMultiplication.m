@@ -1,4 +1,4 @@
-load combinedObjectResults5Frames;
+load combinedPerfect10Frames;
 load order;
 
 n=length(combinedDE);
@@ -8,7 +8,7 @@ pz=(pz);
 for i=2:n
     pz=pz.*((combinedDE{i}.Pz_d));
 end
-pz=combinedED{2}.Pz_d;
+pz=combinedED{1}.Pz_d;
 
 order=order';
 

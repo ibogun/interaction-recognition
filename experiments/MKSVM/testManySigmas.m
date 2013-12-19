@@ -1,6 +1,6 @@
 %clc
 C=[10];
-sigma=[10];
+sigma=[10 100];
 %sigma=[1 10 100];
 %sigma=1;
 load groundTruth;
@@ -67,12 +67,14 @@ K=calculateKernel(X,kernel);
 
 %K=Kobj;
 %
-K1=ones(54);
-for i=1:size(K,3)
-   K1=K1.*K(:,:,i); 
-end
 
-K=K1;
+display('All methods');
+% K1=ones(54);
+% for i=1:size(K,3)
+%    K1=K1.*K(:,:,i); 
+% end
+% 
+% K=K1;
 for i=1:length(C)
     
      
@@ -80,13 +82,13 @@ for i=1:length(C)
     
     fprintf(fid,'method=QuiLane2009 C=%f, accuracy=%f \n',C(i),accuracy);
          
-%     [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'Lanckriet2004a');
-%     
-%     fprintf(fid,'method=Lanckriet2004a C=%f,  accuracy=%f \n',C(i),accuracy);
+    [accuracy, ~]=leaveOneOut(K,groundTruth,C(i),'Lanckriet2004a');
     
-%     [accuracy, ~]=leaveOneOutWithSpecialObjectKernel(K,groundTruth,C(i),'Cortes2010a');
-%     
-%     fprintf(fid,'method=Cortes2010a C=%f,  accuracy=%f \n',C(i),accuracy);
+    fprintf(fid,'method=Lanckriet2004a C=%f,  accuracy=%f \n',C(i),accuracy);
+    
+    [accuracy, ~]=leaveOneOutWithSpecialObjectKernel(K,groundTruth,C(i),'Cortes2010a');
+    
+    fprintf(fid,'method=Cortes2010a C=%f,  accuracy=%f \n',C(i),accuracy);
     
     
 end

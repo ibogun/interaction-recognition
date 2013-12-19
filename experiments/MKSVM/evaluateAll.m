@@ -3,8 +3,8 @@ load combinedPerfect10Frames;
 load order;
 
 
-C=[10];
-sigma=[10 ];
+C=[1];
+sigma=[10 100 ];
 %sigma=[1 10 100];
 %sigma=1;
 load groundTruth;
@@ -71,6 +71,11 @@ for j=1:length(combinedDE)
     acc(j)=accuracy;
     pred{j}=predictedValues;
     
+    
+    [accuracy, ~]=leaveOneOut(K,groundTruth,C,'Cortes2010a');
+    
+    fprintf('method=Cortes2010a C=%f,  accuracy=%f \n',C,accuracy);
+    acc1(j)=accuracy;
     
 end
 %clearvars -except Kobj;
