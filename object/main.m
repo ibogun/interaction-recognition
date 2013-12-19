@@ -5,7 +5,7 @@ clc;clear;close all;
 threshold=6;
 
 r=30;
-
+load interpolatedFullDataInStruct;
 for id=1:54
     
     close all;
@@ -13,9 +13,10 @@ for id=1:54
     %fprintf('Current video: %d \n',id);
     s=getSparseData(id);
     
-    [bestX,bestY,bestT]=findBestLocation(s,threshold);
+    T=data(id).tInteractionStart;
+    [bestX,bestY,bestT]=findBestLocation(s,threshold,T);
     
-    
+    objectPosition{id}=[bestX,bestY];
     % plotting
     
     video=getImageData(id);
@@ -25,9 +26,9 @@ for id=1:54
     bestY=(bestY-10)*2;
     
     
-    for t=1:5
+    for t=1:1
         obj{t}=video{t}(bestY-r:bestY+r,bestX-r:bestX+r,:);
-        %imshow(obj{t});
+        imshow(obj{t});
     end
     
     object{id}=obj;

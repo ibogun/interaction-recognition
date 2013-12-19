@@ -8,8 +8,11 @@ function [  ] = showLocations( s,vid,bestX,bestY,bestT )
 % 
 % pause(1);
 
+T=length(vid);
+
+
 figure;
-for t=bestT:-1:max(bestT-3,1)
+for t=1:T
     
     subplot(1,2,1);
     imagesc(s(:,:,t));

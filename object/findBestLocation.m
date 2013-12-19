@@ -1,15 +1,17 @@
-function [ bestX,bestY,bestT ] = findBestLocation( s,threshold )
+function [ bestX,bestY,bestT ] = findBestLocation( s,threshold,T)
 %FINDBESTLOCATION Summary of this function goes here
 %   Detailed explanation goes here
 
 
-[n,m,T]=size(s);
+[n,m,~]=size(s);
 
 bestY=0;
 bestX=0;
 bestT=0;
 
-for t=1:T/2
+
+
+for t=5:T
     for y=1:n-20
         for x=1:m
             
