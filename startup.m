@@ -1,7 +1,7 @@
 home=pwd;
 addpath(home);
 addpath(strcat(home,'/classes/'));
-addpath(strcat(home,'/utilities/'));
+addpath_recurse(strcat(home,'/utilities/'));
 addpath(strcat(home,'/localization/'));
 
 
